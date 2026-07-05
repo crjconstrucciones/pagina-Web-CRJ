@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* ──────────────────────────────────────────────
+     CRJ Construcciones – Sistema de Tokens de Color
+     Paleta: Oscuro profundo + Dorado + Blanco/Gris
+  ────────────────────────────────────────────── */
+
+  /* Fondo principal: casi negro */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Tarjetas y superficies elevadas */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  /* Color dorado CRJ – acento principal */
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-foreground: var(--gold-foreground);
+
+  /* Superficies oscuras */
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+
+  /* Secciones claras */
+  --color-section-light: var(--section-light);
+  --color-section-alt: var(--section-alt);
+  --color-section-foreground: var(--section-foreground);
+  --color-section-muted: var(--section-muted);
+
+  /* Bordes y líneas sutiles */
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Shadcn tokens necesarios */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  /* Radios */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+
+  /* Fuentes */
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-heading: var(--font-oswald), 'Oswald', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* ── Azul Rey Oscuro CRJ ── */
+  --background: oklch(0.18 0.055 264);       /* azul marino oscuro, fondo oscuro principal */
+  --foreground: oklch(0.96 0 0);             /* #f5f5f5 – blanco */
+
+  /* ── Dorado CRJ ── */
+  --gold: oklch(0.72 0.14 75);              /* ~#C9921A – dorado ámbar */
+  --gold-dark: oklch(0.60 0.14 75);         /* #a87416 – dorado oscuro hover */
+  --gold-foreground: oklch(0.13 0.01 264);  /* azul muy oscuro sobre dorado */
+
+  /* ── Superficies oscuras (Header / Footer / Hero) ── */
+  --surface: oklch(0.22 0.055 264);         /* azul rey un tono más claro */
+  --surface-foreground: oklch(0.96 0 0);
+
+  /* ── Fondo claro (secciones interiores) ── */
+  --section-light: oklch(1 0 0);            /* blanco puro */
+  --section-alt: oklch(0.97 0.005 264);     /* blanco con toque azulado muy sutil */
+
+  /* ── Tarjetas en contexto claro ── */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.055 264);
+
+  /* ── Texto en contexto claro ── */
+  --section-foreground: oklch(0.18 0.055 264);       /* azul oscuro sobre blanco */
+  --section-muted: oklch(0.45 0.02 264);             /* gris azulado para descripciones */
+
+  /* ── Misceláneos shadcn ── */
+  --primary: oklch(0.72 0.14 75);
+  --primary-foreground: oklch(0.13 0.01 264);
+  --secondary: oklch(0.22 0.055 264);
+  --secondary-foreground: oklch(0.96 0 0);
+  --muted: oklch(0.94 0.008 264);
+  --muted-foreground: oklch(0.45 0.02 264);
+  --accent: oklch(0.72 0.14 75);
+  --accent-foreground: oklch(0.13 0.01 264);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.88 0.01 264);
+  --input: oklch(0 0 0 / 10%);
+  --ring: oklch(0.72 0.14 75);
+  --radius: 0.375rem;
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.055 264);
+
+  /* Sidebar (no usado, pero necesario para shadcn) */
+  --sidebar: oklch(0.22 0.055 264);
+  --sidebar-foreground: oklch(0.96 0 0);
+  --sidebar-primary: oklch(0.72 0.14 75);
+  --sidebar-primary-foreground: oklch(0.13 0.01 264);
+  --sidebar-accent: oklch(0.26 0.055 264);
+  --sidebar-accent-foreground: oklch(0.96 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.72 0.14 75);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
