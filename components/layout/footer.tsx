@@ -150,7 +150,7 @@ export function Footer() {
             &copy; {currentYear} CRJ Construcciones.
           </p>
           <p className="text-xs text-muted-foreground">
-            Desarrollado por: Jimena Martínez (jimmartzdev4@hotmail.com)
+            Desarrollado por: Jimena Martínez (jimmartzdev4@hotmail.com) V1
           </p>
           <p className="text-xs text-muted-foreground">
             Neiva, Huila – Colombia
