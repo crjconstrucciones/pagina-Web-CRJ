@@ -1,12 +1,12 @@
-import { GoldButton } from '@/components/ui/gold-button'
-import { Building2, Mail, MapPin, Phone } from 'lucide-react'
+import { GoldButton } from "@/components/ui/gold-button";
+import { Building2, Mail, MapPin, Phone } from "lucide-react";
 
 /**
  * Footer independiente con información de contacto de CRJ Construcciones.
  * Sin formulario – solo datos de contacto y CTA de cotización.
  */
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer
@@ -24,10 +24,15 @@ export function Footer() {
                 ¡Cotiza tu proyecto con nosotros!
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Estamos listos para hacer realidad tu obra con seriedad y respaldo técnico.
+                Estamos listos para hacer realidad tu obra con seriedad y
+                respaldo técnico.
               </p>
             </div>
-            <GoldButton href="tel:3182228500" size="lg" className="flex-shrink-0">
+            <GoldButton
+              href="tel:3182228500"
+              size="lg"
+              className="flex-shrink-0"
+            >
               Llamar ahora
             </GoldButton>
           </div>
@@ -40,19 +45,20 @@ export function Footer() {
           {/* Columna 1 – Identidad */}
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <Building2 className="h-6 w-6 text-[var(--gold)]" aria-hidden="true" />
+              <Building2
+                className="h-6 w-6 text-[var(--gold)]"
+                aria-hidden="true"
+              />
               <span className="font-[family-name:var(--font-heading)] text-xl font-bold uppercase tracking-widest text-[var(--gold)]">
                 CRJ Construcciones
               </span>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Firma contratista familiar especializada en obras civiles, comerciales y residenciales
-              en el Huila. Respaldados por certificación SENA y más de una década de experiencia.
+              Firma contratista familiar especializada en obras civiles,
+              comerciales y residenciales en el Huila. Respaldados por
+              certificación SENA y más de una década de experiencia.
             </p>
             <div className="mt-4 h-0.5 w-12 bg-[var(--gold)]" />
-            <p className="mt-3 text-xs text-muted-foreground">
-              NIT: 1.075.274.448-5
-            </p>
           </div>
 
           {/* Columna 2 – Navegación */}
@@ -62,10 +68,10 @@ export function Footer() {
             </h3>
             <ul className="flex flex-col gap-2">
               {[
-                { label: 'Inicio', href: '#inicio' },
-                { label: 'Nosotros', href: '#nosotros' },
-                { label: 'Servicios', href: '#servicios' },
-                { label: 'Proyectos', href: '#proyectos' },
+                { label: "Inicio", href: "#inicio" },
+                { label: "Nosotros", href: "#nosotros" },
+                { label: "Servicios", href: "#servicios" },
+                { label: "Proyectos", href: "#proyectos" },
               ].map(({ label, href }) => (
                 <li key={href}>
                   <a
@@ -86,13 +92,19 @@ export function Footer() {
             </h3>
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--gold)]" aria-hidden="true" />
+                <MapPin
+                  className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--gold)]"
+                  aria-hidden="true"
+                />
                 <span className="text-sm text-muted-foreground">
                   Corregimiento El Caguán, Neiva – Huila
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-4 w-4 flex-shrink-0 text-[var(--gold)]" aria-hidden="true" />
+                <Phone
+                  className="h-4 w-4 flex-shrink-0 text-[var(--gold)]"
+                  aria-hidden="true"
+                />
                 <div className="flex flex-col gap-0.5">
                   <a
                     href="tel:3182228500"
@@ -109,7 +121,10 @@ export function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--gold)]" aria-hidden="true" />
+                <Mail
+                  className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--gold)]"
+                  aria-hidden="true"
+                />
                 <div className="flex flex-col gap-0.5">
                   <a
                     href="mailto:crj.construcciones@hotmail.com"
@@ -132,7 +147,10 @@ export function Footer() {
         {/* Barra inferior */}
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-[var(--border)] pt-6 text-center md:flex-row md:text-left">
           <p className="text-xs text-muted-foreground">
-            &copy; {currentYear} CRJ Construcciones. Rep. Legal: Carlos Ralthy Javier Pérez Vargas.
+            &copy; {currentYear} CRJ Construcciones.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Desarrollado por: Jimena Martínez (jimmartzdev4@hotmail.com)
           </p>
           <p className="text-xs text-muted-foreground">
             Neiva, Huila – Colombia
@@ -140,5 +158,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
