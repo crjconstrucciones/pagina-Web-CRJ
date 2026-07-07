@@ -66,9 +66,9 @@
   color-scheme: dark;
 
   /* ── Azul Rey Oscuro CRJ ── */
-  --background: oklch(0.12 0.02 261.26);       /* azul marino oscuro, fondo oscuro principal */
+  --background: oklch(0.27, 0.05, 298.5);       /* azul marino oscuro, fondo oscuro principal */
 
-  --foreground: oklch(0.96 0 0);             /* #f5f5f5 – blanco */
+  --foreground: oklch(0.59 0 0 1);             /* #f5f5f5 – blanco */
 
   /* ── Dorado CRJ ── */
   --gold: oklch(0.72 0.14 75);              /* ~#C9921A – dorado ámbar */
@@ -77,7 +77,7 @@
 
   /* ── Superficies oscuras (Header / Footer / Hero) ── */
   --surface: oklch(0.22 0.055 264);         /* azul rey un tono más claro */
-  --surface-foreground: oklch(0.96 0 0);
+  --surface-foreground: oklch(0.65 0 0 1);
 
   /* ── Fondo claro (secciones interiores) ── */
   --section-light: oklch(1 0 0);            /* blanco puro */
@@ -95,9 +95,9 @@
   --primary: oklch(0.72 0.14 75);
   --primary-foreground: oklch(0.13 0.01 264);
   --secondary: oklch(0.22 0.055 264);
-  --secondary-foreground: oklch(0.96 0 0);
-  --muted: oklch(0.94 0.008 264);
-  --muted-foreground: oklch(0.45 0.02 264);
+  --secondary-foreground: oklch(0.65 0 0 1);
+  --muted: oklch(0.65 0 0 1);
+  --muted-foreground: oklch(0.65 0 0 1);
   --accent: oklch(0.72 0.14 75);
   --accent-foreground: oklch(0.13 0.01 264);
   --destructive: oklch(0.577 0.245 27.325);
@@ -110,11 +110,11 @@
 
   /* Sidebar (no usado, pero necesario para shadcn) */
   --sidebar: oklch(0.22 0.055 264);
-  --sidebar-foreground: oklch(0.96 0 0);
+  --sidebar-foreground: oklch(0.65 0 0 1);
   --sidebar-primary: oklch(0.72 0.14 75);
   --sidebar-primary-foreground: oklch(0.13 0.01 264);
   --sidebar-accent: oklch(0.26 0.055 264);
-  --sidebar-accent-foreground: oklch(0.96 0 0);
+  --sidebar-accent-foreground: oklch(0.65 0 0 1);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.72 0.14 75);
 }

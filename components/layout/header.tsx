@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { GoldButton } from '@/components/ui/gold-button'
-import { cn } from '@/lib/utils'
-import { Menu, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { GoldButton } from "@/components/ui/gold-button";
+import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Contacto', href: '#contacto' },
-] as const
+  { label: "Inicio", href: "#inicio" },
+  { label: "Nosotros", href: "#nosotros" },
+  { label: "Servicios", href: "#servicios" },
+  { label: "Proyectos", href: "#proyectos" },
+  { label: "Contacto", href: "#contacto" },
+] as const;
 
 /**
  * Header independiente con navegación interna (anclas).
@@ -19,24 +19,25 @@ const NAV_LINKS = [
  * Incluye menú hamburguesa para móvil.
  */
 export function Header() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const handleNavClick = () => setMobileOpen(false)
+  const handleNavClick = () => setMobileOpen(false);
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? 'bg-[var(--surface)] shadow-lg shadow-black/40'
-          : 'bg-background/80 backdrop-blur-md',
+          ? "bg-[var(--surface)] shadow-lg shadow-black/40"
+          : "bg-background/80 backdrop-blur-md",
       )}
       role="banner"
     >
@@ -47,12 +48,11 @@ export function Header() {
           className="flex flex-col items-start leading-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]"
           aria-label="CRJ Construcciones – Ir al inicio"
         >
-          <span className="font-[family-name:var(--font-heading)] text-2xl font-bold tracking-wider text-[var(--gold)]">
-            CRJ
-          </span>
-          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-foreground/80">
-            Construcciones
-          </span>
+          <img
+            src="/logov.png"
+            alt="Logo CRJ Construcciones y Remodelación"
+            className="h-18 w-auto object-contain"
+          />
         </a>
 
         {/* Navegación desktop */}
@@ -84,9 +84,13 @@ export function Header() {
           onClick={() => setMobileOpen((v) => !v)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
-          aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
         >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {mobileOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
         </button>
       </div>
 
@@ -94,8 +98,8 @@ export function Header() {
       <div
         id="mobile-menu"
         className={cn(
-          'overflow-hidden transition-all duration-300 md:hidden',
-          mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0',
+          "overflow-hidden transition-all duration-300 md:hidden",
+          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         )}
         aria-hidden={!mobileOpen}
       >
@@ -114,12 +118,17 @@ export function Header() {
             </a>
           ))}
           <div className="mt-4">
-            <GoldButton href="#contacto" size="sm" className="w-full" onClick={handleNavClick}>
+            <GoldButton
+              href="#contacto"
+              size="sm"
+              className="w-full"
+              onClick={handleNavClick}
+            >
               Cotizar
             </GoldButton>
           </div>
         </nav>
       </div>
     </header>
-  )
+  );
 }

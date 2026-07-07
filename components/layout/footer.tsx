@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer
       id="contacto"
-      className="bg-[oklch(0.10_0.004_264)] border-t border-[var(--border)]"
+      className="bg-[oklch(0.22_0.05_264)] border-t border-[var(--border)]"
       role="contentinfo"
       aria-label="Pie de página – Contacto"
     >
@@ -149,8 +149,8 @@ export function Footer() {
           <p className="text-xs text-muted-foreground">
             &copy; {currentYear} CRJ Construcciones.
           </p>
-          <p className="text-xs text-muted-foreground">
-            Desarrollado por: Jimena Martínez (jimmartzdev4@hotmail.com) V1
+          <p className="text-xs text-[#444444]">
+            Desarrollado por: Jimena Martínez (jimmartzdev4@hotmail.com)
           </p>
           <p className="text-xs text-muted-foreground">
             Neiva, Huila – Colombia
