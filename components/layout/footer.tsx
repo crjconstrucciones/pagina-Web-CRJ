@@ -110,13 +110,13 @@ export function Footer() {
                     href="tel:3182228500"
                     className="text-sm text-muted-foreground transition-colors hover:text-[var(--gold)]"
                   >
-                    318 222 8500
+                    302 600 9798
                   </a>
                   <a
                     href="tel:3026009798"
                     className="text-sm text-muted-foreground transition-colors hover:text-[var(--gold)]"
                   >
-                    302 600 9798
+                    318 222 8500
                   </a>
                 </div>
               </li>
@@ -131,12 +131,6 @@ export function Footer() {
                     className="text-sm text-muted-foreground transition-colors hover:text-[var(--gold)]"
                   >
                     crj.construcciones@hotmail.com
-                  </a>
-                  <a
-                    href="mailto:javier-0931@hotmail.com"
-                    className="text-sm text-muted-foreground transition-colors hover:text-[var(--gold)]"
-                  >
-                    javier-0931@hotmail.com
                   </a>
                 </div>
               </li>
